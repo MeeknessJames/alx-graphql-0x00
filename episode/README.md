@@ -1,14 +1,25 @@
-# Episode Queries
+# Episode Query
 
-This directory contains GraphQL queries to fetch episodes by ID.
+This section contains GraphQL queries to fetch details of a specific episode from the API.
 
-Files:
+## Files
+- `episode-page-1.graphql` → Query for episode with ID 1
+- `episode-page-1-output.json` → Output of the query
 
-- `episode-id-1.graphql` → Query for episode with ID 1
-- `episode-id-1-output.json` → Output of the query
-- `episode-id-2.graphql` → Query for episode with ID 2
-- `episode-id-2-output.json` → Output of the query
-- `episode-id-3.graphql` → Query for episode with ID 3
-- `episode-id-3-output.json` → Output of the query
-- `episode-id-4.graphql` → Query for episode with ID 4
-- `episode-id-4-output.json` → Output of the query
+## Fields Retrieved
+Each query retrieves:
+- `id`
+- `name`
+- `air_date`
+- `episode`
+
+## Example Query
+```graphql
+query {
+  episode(id: 1) {
+    id
+    name
+    air_date
+    episode
+  }
+}
